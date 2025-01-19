@@ -1,0 +1,1 @@
+# Example `scratch-notes` project
