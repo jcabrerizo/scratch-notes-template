@@ -15,9 +15,17 @@ extensions to suit your preferences.
 
 To change the name of the generated site, which defaults to "Example," follow this simple command:
 
-```bash
+```shell
 SITE_NAME="My new notes site"
 sed -i "/site_name: Example/c\site_name: $SITE_NAME" mkdocs.yml
+```
+
+For adding the submodule into the uber repo run:
+
+```shell
+SUBMODULE_NAME=Example
+SUBMODULE_URL=git@github.com:jcabrerizo/example.git
+make add_submodule SUBMODULE_NAME=$SITE_NAME SUBMODULE_URL=$SUBMODULE_URL"
 ```
 
 ## MkDocs Configuration
