@@ -25,7 +25,7 @@ For adding the submodule into the uber repo run:
 ```shell
 SUBMODULE_NAME=Example
 SUBMODULE_URL=git@github.com:jcabrerizo/example.git
-make add_submodule SUBMODULE_NAME=$SITE_NAME SUBMODULE_URL=$SUBMODULE_URL"
+make add_submodule SUBMODULE_NAME=$SITE_NAME SUBMODULE_URL=$SUBMODULE_URL
 ```
 
 ## MkDocs Configuration
