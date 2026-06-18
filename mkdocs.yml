@@ -4,8 +4,13 @@ docs_dir: docs
 # repo_url: https://github.com/user/example
 edit_uri: edit/main/docs/
 
+validation:
+  links:
+    absolute_links: relative_to_docs
+
 plugins:
   - search
+  - tags
 theme:
   name: material
   features:
@@ -15,6 +20,7 @@ theme:
     - navigation.indexes
     - navigation.top
     - content.action.edit
+    - content.code.copy
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -36,19 +42,22 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 markdown_extensions:
-  - admonition # ref: https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+  - admonition
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+      clickable_checkbox: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.blocks.tab:
+      alternate_style: true
